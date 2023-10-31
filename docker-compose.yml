@@ -31,8 +31,6 @@ services:
       traefik.enable: "true"
       traefik.http.routers.plausible.rule: "Host(`analytics.networkcanvas.dev`)"
       traefik.http.routers.plausible.entrypoints: "websecure"
-    ports:
-      - 3000:8000
     env_file:
       - plausible-conf.env
 
