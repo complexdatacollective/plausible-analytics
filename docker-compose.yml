@@ -27,6 +27,8 @@ services:
     depends_on:
       - plausible_db
       - plausible_events_db
+    ports:
+      - 127.0.0.1:8000:8000
     labels:
       traefik.enable: "true"
       traefik.http.routers.plausible.rule: "Host(`analytics.networkcanvas.dev`)"
